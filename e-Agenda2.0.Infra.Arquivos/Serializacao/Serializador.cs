@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace e_Agenda2._0.Infra.Arquivos.Serializacao
 {
-    internal class Serializador
+    internal class Serializador 
     {
     }
 }
