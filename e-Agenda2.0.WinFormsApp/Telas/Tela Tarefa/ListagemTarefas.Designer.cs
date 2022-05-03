@@ -173,7 +173,6 @@
             this.btnCadastrarItens.TabIndex = 5;
             this.btnCadastrarItens.Text = "Cadastrar itens";
             this.btnCadastrarItens.UseVisualStyleBackColor = false;
-            this.btnCadastrarItens.Click += new System.EventHandler(this.btnCadastrarItens_Click);
             // 
             // btnAtualizarItens
             // 
@@ -184,7 +183,6 @@
             this.btnAtualizarItens.TabIndex = 6;
             this.btnAtualizarItens.Text = "Atualizar itens";
             this.btnAtualizarItens.UseVisualStyleBackColor = false;
-            this.btnAtualizarItens.Click += new System.EventHandler(this.btnAtualizarItens_Click);
             // 
             // TelaListagemTarefas
             // 

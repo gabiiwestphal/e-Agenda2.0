@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using e_Agenda2._0.WinFormsApp.Telas.Tela_Tarefa;
+using e_Agenda2._0.WinFormsApp.Telas.Tela_Contato;
+using e_Agenda2._0.WinFormsApp.Telas.Tela_Compromisso;
 
 namespace e_Agenda2._0.WinFormsApp
 {
@@ -21,21 +23,21 @@ namespace e_Agenda2._0.WinFormsApp
         private void btnCompromisso_Click(object sender, EventArgs e)
         {
             panelPrincipal.Controls.Clear();
-            TelaListagemCompromissos tela = new TelaListagemCompromissos();
+            ListagemCompromisso tela = new ListagemCompromisso();
             panelPrincipal.Controls.Add(tela);
         }
 
         private void btnTarefas_Click(object sender, EventArgs e)
         {
             panelPrincipal.Controls.Clear();
-            TelaListagemTarefas tela = new TelaListagemTarefas();
+            ListagemTarefas tela = new ListagemTarefas();
             panelPrincipal.Controls.Add(tela);
         }
 
         private void btnContatos_Click(object sender, EventArgs e)
         {
             panelPrincipal.Controls.Clear();
-            TelaListagemContatos tela = new TelaListagemContatos();
+            ListagemContato tela = new ListagemContato();
             panelPrincipal.Controls.Add(tela);
         }
     }

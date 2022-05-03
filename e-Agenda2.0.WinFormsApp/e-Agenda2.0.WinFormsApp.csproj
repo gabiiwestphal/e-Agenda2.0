@@ -12,8 +12,4 @@
     <ProjectReference Include="..\e-Agenda2.0.Dominio\e-Agenda2.0.Dominio.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Telas\Tela Contato\" />
-  </ItemGroup>
-
 </Project>

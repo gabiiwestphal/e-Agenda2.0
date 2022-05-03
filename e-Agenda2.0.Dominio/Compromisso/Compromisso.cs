@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using e_Agenda2._0.Dominio.Contato;
 using e_Agenda2._0.Dominio.Compartilhado;
+using e_Agenda2._0.Dominio.Tarefa;
+
 
 namespace e_Agenda2._0.Dominio.Compromisso
 {
