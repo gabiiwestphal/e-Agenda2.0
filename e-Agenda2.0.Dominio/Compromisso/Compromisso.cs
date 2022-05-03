@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using e_Agenda2._0.Dominio.Contato;
-using e_Agenda2._0.Dominio.Compartilhado;
 using e_Agenda2._0.Dominio.Tarefa;
+using e_Agenda2._0.Dominio.Compartilhado;
 
 
 namespace e_Agenda2._0.Dominio.Compromisso
 {
-    public class Compromisso
+    public class Compromisso : EntidadeBase
     {
         public string Assunto { get; set; }
         public string Local { get; set; }

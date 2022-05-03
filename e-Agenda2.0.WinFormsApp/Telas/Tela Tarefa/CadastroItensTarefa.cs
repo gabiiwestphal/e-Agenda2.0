@@ -38,25 +38,6 @@ namespace e_Agenda2._0.WinFormsApp.Telas.Tela_Tarefa
             }
         }
 
-        private void btnAdicionar_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtDescricaoItem.Text) == false)
-            {
-                List<string> descricoes = ItensAdicionados.Select(x => x.Descricao.ToUpper()).ToList();
-
-                if (descricoes.Count == 0 || descricoes.Contains(txtDescricaoItem.Text) == false)
-                {
-                    Item item = new Item();
-
-                    item.Descricao = txtDescricaoItem.Text;
-
-                    listItensTarefa.Items.Add(item);
-                }
-                else
-                    MessageBox.Show("Item já existente na tarefa!", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-                MessageBox.Show("Descrição vazia", "Informativo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
-}
+
