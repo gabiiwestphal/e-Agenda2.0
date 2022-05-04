@@ -28,165 +28,167 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtEmpresa = new System.Windows.Forms.TextBox();
-            this.txtCargo = new System.Windows.Forms.TextBox();
-            this.btnGravar = new System.Windows.Forms.Button();
-            this.btnLimparCampos = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.l_CadastroContato = new System.Windows.Forms.Label();
+            this.l_Nome = new System.Windows.Forms.Label();
+            this.tb_Nome = new System.Windows.Forms.TextBox();
+            this.tb_Email = new System.Windows.Forms.TextBox();
+            this.l_Email = new System.Windows.Forms.Label();
+            this.tb_Telefone = new System.Windows.Forms.TextBox();
+            this.l_Telefone = new System.Windows.Forms.Label();
+            this.tb_Empresa = new System.Windows.Forms.TextBox();
+            this.l_Empresa = new System.Windows.Forms.Label();
+            this.tb_Cargo = new System.Windows.Forms.TextBox();
+            this.l_Cargo = new System.Windows.Forms.Label();
+            this.btn_Inserir = new System.Windows.Forms.Button();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // l_CadastroContato
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome:";
+            this.l_CadastroContato.AutoSize = true;
+            this.l_CadastroContato.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.l_CadastroContato.Location = new System.Drawing.Point(22, 7);
+            this.l_CadastroContato.Name = "l_CadastroContato";
+            this.l_CadastroContato.Size = new System.Drawing.Size(167, 19);
+            this.l_CadastroContato.TabIndex = 2;
+            this.l_CadastroContato.Text = "Cadastro de Contato";
             // 
-            // label2
+            // l_Nome
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "E-mail:";
+            this.l_Nome.AutoSize = true;
+            this.l_Nome.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_Nome.Location = new System.Drawing.Point(10, 38);
+            this.l_Nome.Name = "l_Nome";
+            this.l_Nome.Size = new System.Drawing.Size(47, 16);
+            this.l_Nome.TabIndex = 4;
+            this.l_Nome.Text = "Nome:";
             // 
-            // label3
+            // tb_Nome
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Telefone:";
+            this.tb_Nome.Location = new System.Drawing.Point(10, 52);
+            this.tb_Nome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Nome.Name = "tb_Nome";
+            this.tb_Nome.Size = new System.Drawing.Size(207, 23);
+            this.tb_Nome.TabIndex = 5;
             // 
-            // label4
+            // tb_Email
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Empresa:";
+            this.tb_Email.Location = new System.Drawing.Point(246, 52);
+            this.tb_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Email.Name = "tb_Email";
+            this.tb_Email.Size = new System.Drawing.Size(207, 23);
+            this.tb_Email.TabIndex = 7;
             // 
-            // label5
+            // l_Email
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 151);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Cargo:";
+            this.l_Email.AutoSize = true;
+            this.l_Email.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_Email.Location = new System.Drawing.Point(246, 34);
+            this.l_Email.Name = "l_Email";
+            this.l_Email.Size = new System.Drawing.Size(45, 16);
+            this.l_Email.TabIndex = 6;
+            this.l_Email.Text = "Email:";
             // 
-            // txtNome
+            // tb_Telefone
             // 
-            this.txtNome.Location = new System.Drawing.Point(83, 27);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(282, 23);
-            this.txtNome.TabIndex = 0;
-            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_Telefone.Location = new System.Drawing.Point(12, 110);
+            this.tb_Telefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Telefone.Name = "tb_Telefone";
+            this.tb_Telefone.Size = new System.Drawing.Size(207, 23);
+            this.tb_Telefone.TabIndex = 9;
             // 
-            // txtEmail
+            // l_Telefone
             // 
-            this.txtEmail.Location = new System.Drawing.Point(83, 56);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(282, 23);
-            this.txtEmail.TabIndex = 1;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.l_Telefone.AutoSize = true;
+            this.l_Telefone.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_Telefone.Location = new System.Drawing.Point(10, 92);
+            this.l_Telefone.Name = "l_Telefone";
+            this.l_Telefone.Size = new System.Drawing.Size(65, 16);
+            this.l_Telefone.TabIndex = 8;
+            this.l_Telefone.Text = "Telefone:";
             // 
-            // txtEmpresa
+            // tb_Empresa
             // 
-            this.txtEmpresa.Location = new System.Drawing.Point(83, 114);
-            this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(282, 23);
-            this.txtEmpresa.TabIndex = 3;
-            this.txtEmpresa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_Empresa.Location = new System.Drawing.Point(246, 110);
+            this.tb_Empresa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Empresa.Name = "tb_Empresa";
+            this.tb_Empresa.Size = new System.Drawing.Size(207, 23);
+            this.tb_Empresa.TabIndex = 11;
             // 
-            // txtCargo
+            // l_Empresa
             // 
-            this.txtCargo.Location = new System.Drawing.Point(83, 143);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(282, 23);
-            this.txtCargo.TabIndex = 4;
-            this.txtCargo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.l_Empresa.AutoSize = true;
+            this.l_Empresa.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_Empresa.Location = new System.Drawing.Point(246, 92);
+            this.l_Empresa.Name = "l_Empresa";
+            this.l_Empresa.Size = new System.Drawing.Size(67, 16);
+            this.l_Empresa.TabIndex = 10;
+            this.l_Empresa.Text = "Empresa:";
             // 
-            // btnGravar
+            // tb_Cargo
             // 
-            this.btnGravar.BackColor = System.Drawing.Color.White;
-            this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnGravar.Location = new System.Drawing.Point(128, 186);
-            this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(75, 38);
-            this.btnGravar.TabIndex = 5;
-            this.btnGravar.Text = "Gravar";
-            this.btnGravar.UseVisualStyleBackColor = false;
-            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
+            this.tb_Cargo.Location = new System.Drawing.Point(10, 171);
+            this.tb_Cargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Cargo.Name = "tb_Cargo";
+            this.tb_Cargo.Size = new System.Drawing.Size(443, 23);
+            this.tb_Cargo.TabIndex = 13;
             // 
-            // btnLimparCampos
+            // l_Cargo
             // 
-            this.btnLimparCampos.BackColor = System.Drawing.Color.White;
-            this.btnLimparCampos.Location = new System.Drawing.Point(209, 186);
-            this.btnLimparCampos.Name = "btnLimparCampos";
-            this.btnLimparCampos.Size = new System.Drawing.Size(75, 38);
-            this.btnLimparCampos.TabIndex = 6;
-            this.btnLimparCampos.Text = "Limpar";
-            this.btnLimparCampos.UseVisualStyleBackColor = false;
-            this.btnLimparCampos.Click += new System.EventHandler(this.btnLimparCampos_Click);
+            this.l_Cargo.AutoSize = true;
+            this.l_Cargo.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_Cargo.Location = new System.Drawing.Point(10, 153);
+            this.l_Cargo.Name = "l_Cargo";
+            this.l_Cargo.Size = new System.Drawing.Size(50, 16);
+            this.l_Cargo.TabIndex = 12;
+            this.l_Cargo.Text = "Cargo:";
             // 
-            // btnCancelar
+            // btn_Inserir
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(290, 186);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 38);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btn_Inserir.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_Inserir.Location = new System.Drawing.Point(10, 208);
+            this.btn_Inserir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Inserir.Name = "btn_Inserir";
+            this.btn_Inserir.Size = new System.Drawing.Size(206, 32);
+            this.btn_Inserir.TabIndex = 14;
+            this.btn_Inserir.Text = "Inserir";
+            this.btn_Inserir.UseVisualStyleBackColor = true;
+            this.btn_Inserir.Click += new System.EventHandler(this.btn_Inserir_Click);
             // 
-            // txtTelefone
+            // btn_Cancelar
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(83, 85);
-            this.txtTelefone.Mask = "(00) 0 0000-0000";
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(282, 23);
-            this.txtTelefone.TabIndex = 2;
+            this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_Cancelar.Location = new System.Drawing.Point(247, 208);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(206, 32);
+            this.btn_Cancelar.TabIndex = 15;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // CadastroContato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(425, 254);
-            this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnLimparCampos);
-            this.Controls.Add(this.btnGravar);
-            this.Controls.Add(this.txtCargo);
-            this.Controls.Add(this.txtEmpresa);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.ClientSize = new System.Drawing.Size(468, 257);
+            this.Controls.Add(this.btn_Cancelar);
+            this.Controls.Add(this.btn_Inserir);
+            this.Controls.Add(this.tb_Cargo);
+            this.Controls.Add(this.l_Cargo);
+            this.Controls.Add(this.tb_Empresa);
+            this.Controls.Add(this.l_Empresa);
+            this.Controls.Add(this.tb_Telefone);
+            this.Controls.Add(this.l_Telefone);
+            this.Controls.Add(this.tb_Email);
+            this.Controls.Add(this.l_Email);
+            this.Controls.Add(this.tb_Nome);
+            this.Controls.Add(this.l_Nome);
+            this.Controls.Add(this.l_CadastroContato);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CadastroContato";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Contatos";
+            this.Text = "Cadastro de Contato";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,18 +196,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtEmpresa;
-        private System.Windows.Forms.TextBox txtCargo;
-        private System.Windows.Forms.Button btnGravar;
-        private System.Windows.Forms.Button btnLimparCampos;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.Label l_CadastroContato;
+        private System.Windows.Forms.Label l_Nome;
+        private System.Windows.Forms.TextBox tb_Nome;
+        private System.Windows.Forms.TextBox tb_Email;
+        private System.Windows.Forms.Label l_Email;
+        private System.Windows.Forms.TextBox tb_Telefone;
+        private System.Windows.Forms.Label l_Telefone;
+        private System.Windows.Forms.TextBox tb_Empresa;
+        private System.Windows.Forms.Label l_Empresa;
+        private System.Windows.Forms.TextBox tb_Cargo;
+        private System.Windows.Forms.Label l_Cargo;
+        private System.Windows.Forms.Button btn_Inserir;
+        private System.Windows.Forms.Button btn_Cancelar;
     }
 }

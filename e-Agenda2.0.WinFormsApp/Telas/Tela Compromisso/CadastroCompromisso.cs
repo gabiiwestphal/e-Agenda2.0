@@ -16,84 +16,84 @@ namespace e_Agenda2._0.WinFormsApp.Telas.Tela_Compromisso
     public partial class CadastroCompromisso : Form
     {
         private Compromisso compromisso;
-        private IRepositorio<Contato> repositorioContatos;
+        private IRepositorioContato repositorioContato;
 
         public CadastroCompromisso()
         {
             InitializeComponent();
 
-            Inicializar();
+
+            List<Contato> contatos = repositorioContato.SelecionarTodos();
+
+            cb_Contato.Items.Clear();
+
+            foreach (Contato c in contatos)
+            {
+                cb_Contato.Items.Add(c.Nome);
+            }
+
         }
 
         public Compromisso Compromisso
         {
-            get => compromisso;
+            get
+            {
+                return compromisso;
+            }
             set
             {
                 compromisso = value;
-                txtAssunto.Text = compromisso.Assunto;
-                txtLocal.Text = compromisso.Local;
-                dateTimePickerDataCompromisso.Value = compromisso.DataInicio == new DateTime(1, 1, 1) ? DateTime.Today : compromisso.DataInicio;
-                dateTimePickerHoraInicio.Value = compromisso.HoraInicio == new DateTime(1, 1, 1) ? DateTime.Now : compromisso.HoraInicio; ;
-                dateTimePickerHoraTermino.Value = compromisso.HoraTermino == new DateTime(1, 1, 1) ? DateTime.Now : compromisso.HoraTermino; ;
-                comboBoxContato.SelectedItem = compromisso.NomeContato;
+                tb_Assunto.Text = compromisso.Assunto;
+                tb_Local.Text = compromisso.Local;
 
-            }
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            dateTimePickerDataCompromisso.Value = DateTime.Now;
-
-            comboBoxContato.SelectedIndex = -1;
-
-            txtAssunto.Clear();
-
-            txtLocal.Clear();
-
-            PopularCamposDeHorario();
-
-        }
-
-        private void btnGravar_Click(object sender, EventArgs e)
-        {
-            Compromisso.Assunto = txtAssunto.Text;
-            Compromisso.Local = txtLocal.Text;
-            Compromisso.DataInicio = dateTimePickerDataCompromisso.Value;
-            Compromisso.HoraInicio = dateTimePickerHoraInicio.Value;
-            Compromisso.HoraTermino = dateTimePickerHoraTermino.Value;
-            //Compromisso.NomeContato =; problemas com o nome.
-
-        }
-
-        private void PopularNomesContatosCombobox()
-        {
-
-            List<Contato> contatos = repositorioContatos.SelecionarTodos();
-
-            if (contatos.Count > 0)
-            {
-                foreach (Contato item in contatos)
+                if (compromisso.DataCompromisso < dt_Data.MinDate)
                 {
-                    comboBoxContato.Items.Add(item);
+                    dt_Data.Value = DateTime.Now;
                 }
+                else
+                {
+                    dt_Data.Value = compromisso.DataCompromisso;
+                }
+
+                tb_HoraInicio.Text = compromisso.HoraInicio;
+                tb_HoraTermino.Text = compromisso.HoraTermino;
+
+                if (!String.IsNullOrEmpty(cb_Contato.Text))
+                {
+                    cb_Contato.Text = compromisso.Contato.Nome;
+                }
+
             }
         }
 
-        private void PopularCamposDeHorario()
+        private Contato ReceberContato(string nome)
         {
-            dateTimePickerHoraInicio.Value = DateTime.Now;
-            dateTimePickerHoraTermino.Value = DateTime.Now;
+            List<Contato> contatos = repositorioContato.SelecionarTodos();
+
+            foreach (Contato contato in contatos)
+            {
+                if (contato.Nome == nome)
+                    return contato;
+            }
+
+            return null;
         }
 
-        private void Inicializar()
+        private void btn_Inserir_Click(object sender, EventArgs e)
         {
-            dateTimePickerDataCompromisso.MinDate = DateTime.Today;
-
-            PopularNomesContatosCombobox();
-
-            PopularCamposDeHorario();
+            compromisso.Assunto = tb_Assunto.Text;
+            compromisso.Local = tb_Local.Text;
+            compromisso.DataCompromisso = dt_Data.Value;
+            compromisso.HoraInicio = tb_HoraInicio.Text;
+            compromisso.HoraTermino = tb_HoraTermino.Text;
+            compromisso.Contato = ReceberContato(cb_Contato.Text);
         }
+
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+     
     }
 }
 

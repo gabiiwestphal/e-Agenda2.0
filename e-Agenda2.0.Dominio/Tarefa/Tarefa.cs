@@ -3,18 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using e_Agenda2._0.Dominio.Compartilhado;
 
 namespace e_Agenda2._0.Dominio.Tarefa
 {
-    public class Tarefa : EntidadeBase
+    public class Tarefa 
     {
         private List<Item> itens = new List<Item>();
 
-        private int prioridade;
-        public string Descricao;
-        private Status statusTarefa;
-
+        public PrioridadeTarefa Prioridade { get; set; }
         public DateTime DataCriacao { get; set; }
         public string Titulo { get; set; }
         public int Numero { get; set; }
@@ -25,58 +21,36 @@ namespace e_Agenda2._0.Dominio.Tarefa
             DataCriacao = DateTime.Now;
         }
 
-        public Tarefa(int n, string descricao, string prioridade) : this()
+        public Tarefa(int n, string t) : this()
         {
             Numero = n;
-            Titulo = descricao;
+            Titulo = t;
             DataConclusao = null;
-            PrioridadeTarefa = prioridade;
         }
-        public Status StatusTarefa
+        public override string ToString()
         {
-            get
-            {
-                return CalcularPercentualConcluido() == 100 ? Status.concluido : Status.pendente;
+            var percentual = CalcularPercentualConcluido();
 
-            }
-            set { statusTarefa = value; }
-        }
-        public string PrioridadeTarefa
-        {
-            get
+            if (DataConclusao.HasValue)
             {
-                string retorno = "";
-                if (prioridade == 1)
-                    retorno = "Baixa";
-                else if (prioridade == 2)
-                    retorno = "Normal";
-                else if (prioridade == 3)
-                    retorno = "Alta";
-
-                return retorno;
+                return "\tNúmero: " + Numero +
+                    "\t Título: " + Titulo +
+                    "\t Percentual: " + percentual +
+                    "\t Data de Criação: " + DataCriacao +
+                    "\t Prioridade: " + Prioridade +
+                    "\t Data de conclusão: " + DataConclusao.Value.ToShortDateString() + "\n";
             }
 
-            set
-            {
-                if (value == "Baixa")
-                    prioridade = 1;
-                else if (value == "Normal")
-                    prioridade = 2;
-                else if (value == "Alta")
-                    prioridade = 3;
-            }
+            return "\t Número: " + Numero +
+                "\t Título: " + Titulo +
+                "\t Percentual: " + percentual +
+                "\t Data de criação: " + DataCriacao +
+                "\t Prioridade: " + Prioridade + "\n";
         }
         public void AdicionarItem(Item item)
         {
             if (Itens.Exists(x => x.Equals(item)) == false)
                 itens.Add(item);
-        }
-        public void MarcarPendente(Item item)
-        {
-            Item itemTarefa = itens.Find(x => x.Equals(item));
-
-            itemTarefa?.MarcarPendente();
-
         }
 
         public void ConcluirItem(Item item)
@@ -90,6 +64,14 @@ namespace e_Agenda2._0.Dominio.Tarefa
             if (percentual == 100)
                 DataConclusao = DateTime.Now;
         }
+
+        public void MarcarPendente(Item item)
+        {
+            Item itemTarefa = itens.Find(x => x.Equals(item));
+
+            itemTarefa?.MarcarPendente();
+        }
+
         public decimal CalcularPercentualConcluido()
         {
             if (itens.Count == 0)
@@ -101,24 +83,6 @@ namespace e_Agenda2._0.Dominio.Tarefa
 
             return Math.Round(percentualConcluido, 2);
         }
-        public override string Validar()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            if (string.IsNullOrEmpty(Titulo))
-                sb.AppendLine(" - É necessário inserir um título!");
-
-            if (DataCriacao.Date == new DateTime(1, 1, 1))
-                sb.AppendLine(" - É necessário inserir uma data de criação!");
-
-            if (prioridade == 0)
-                sb.AppendLine(" - É necessário inserir uma prioridade (Alta, Normal ou Baixa)!");
-
-            if (sb.Length == 0)
-                sb.Append("REGISTRO_VALIDO");
-
-            return sb.ToString();
-        }
-
     }
 }
+

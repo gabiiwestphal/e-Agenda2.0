@@ -28,138 +28,125 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtTitulo = new System.Windows.Forms.TextBox();
-            this.btnGravar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBoxPrioridade = new System.Windows.Forms.ComboBox();
-            this.txtDataCriacao = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.l_CadastroTarefa = new System.Windows.Forms.Label();
+            this.btn_Cadastrar = new System.Windows.Forms.Button();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
+            this.l_titulo = new System.Windows.Forms.Label();
+            this.tb_Titulo = new System.Windows.Forms.TextBox();
+            this.l_Prioridade = new System.Windows.Forms.Label();
+            this.cb_Prioridade = new System.Windows.Forms.ComboBox();
+            this.tb_Numero = new System.Windows.Forms.TextBox();
+            this.l_Numero = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // l_CadastroTarefa
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Número:";
+            this.l_CadastroTarefa.AutoSize = true;
+            this.l_CadastroTarefa.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.l_CadastroTarefa.Location = new System.Drawing.Point(18, 6);
+            this.l_CadastroTarefa.Name = "l_CadastroTarefa";
+            this.l_CadastroTarefa.Size = new System.Drawing.Size(153, 19);
+            this.l_CadastroTarefa.TabIndex = 0;
+            this.l_CadastroTarefa.Text = "Cadastro de Tarefa";
             // 
-            // label2
+            // btn_Cadastrar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Título:";
+            this.btn_Cadastrar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_Cadastrar.Location = new System.Drawing.Point(10, 145);
+            this.btn_Cadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Cadastrar.Name = "btn_Cadastrar";
+            this.btn_Cadastrar.Size = new System.Drawing.Size(184, 32);
+            this.btn_Cadastrar.TabIndex = 1;
+            this.btn_Cadastrar.Text = "Cadastrar Tarefa";
+            this.btn_Cadastrar.UseVisualStyleBackColor = true;
+            this.btn_Cadastrar.Click += new System.EventHandler(this.btn_Cadastrar_Click);
             // 
-            // txtId
+            // btn_Cancelar
             // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(72, 17);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(61, 23);
-            this.txtId.TabIndex = 2;
+            this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_Cancelar.Location = new System.Drawing.Point(220, 145);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(184, 32);
+            this.btn_Cancelar.TabIndex = 2;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
-            // txtTitulo
+            // l_titulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(72, 46);
-            this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(352, 23);
-            this.txtTitulo.TabIndex = 3;
+            this.l_titulo.AutoSize = true;
+            this.l_titulo.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_titulo.Location = new System.Drawing.Point(220, 39);
+            this.l_titulo.Name = "l_titulo";
+            this.l_titulo.Size = new System.Drawing.Size(47, 16);
+            this.l_titulo.TabIndex = 3;
+            this.l_titulo.Text = "Título:";
             // 
-            // btnGravar
+            // tb_Titulo
             // 
-            this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnGravar.Location = new System.Drawing.Point(271, 160);
-            this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(72, 39);
-            this.btnGravar.TabIndex = 4;
-            this.btnGravar.Text = "Gravar";
-            this.btnGravar.UseVisualStyleBackColor = true;
-            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
+            this.tb_Titulo.Location = new System.Drawing.Point(220, 57);
+            this.tb_Titulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Titulo.Name = "tb_Titulo";
+            this.tb_Titulo.Size = new System.Drawing.Size(184, 23);
+            this.tb_Titulo.TabIndex = 5;
             // 
-            // btnCancelar
+            // l_Prioridade
             // 
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(352, 160);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(72, 39);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.l_Prioridade.AutoSize = true;
+            this.l_Prioridade.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_Prioridade.Location = new System.Drawing.Point(10, 91);
+            this.l_Prioridade.Name = "l_Prioridade";
+            this.l_Prioridade.Size = new System.Drawing.Size(76, 16);
+            this.l_Prioridade.TabIndex = 8;
+            this.l_Prioridade.Text = "Prioridade:";
             // 
-            // label3
+            // cb_Prioridade
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Prioridade:";
+            this.cb_Prioridade.FormattingEnabled = true;
+            this.cb_Prioridade.Location = new System.Drawing.Point(10, 109);
+            this.cb_Prioridade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cb_Prioridade.Name = "cb_Prioridade";
+            this.cb_Prioridade.Size = new System.Drawing.Size(394, 23);
+            this.cb_Prioridade.TabIndex = 9;
             // 
-            // comboBoxPrioridade
+            // tb_Numero
             // 
-            this.comboBoxPrioridade.AutoCompleteCustomSource.AddRange(new string[] {
-            "Baixa",
-            "Normal",
-            "Alta"});
-            this.comboBoxPrioridade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPrioridade.FormattingEnabled = true;
-            this.comboBoxPrioridade.Items.AddRange(new object[] {
-            "Baixa",
-            "Normal",
-            "Alta"});
-            this.comboBoxPrioridade.Location = new System.Drawing.Point(72, 74);
-            this.comboBoxPrioridade.Name = "comboBoxPrioridade";
-            this.comboBoxPrioridade.Size = new System.Drawing.Size(156, 23);
-            this.comboBoxPrioridade.TabIndex = 7;
+            this.tb_Numero.Enabled = false;
+            this.tb_Numero.Location = new System.Drawing.Point(10, 55);
+            this.tb_Numero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Numero.Name = "tb_Numero";
+            this.tb_Numero.Size = new System.Drawing.Size(184, 23);
+            this.tb_Numero.TabIndex = 11;
             // 
-            // txtDataCriacao
+            // l_Numero
             // 
-            this.txtDataCriacao.Enabled = false;
-            this.txtDataCriacao.Location = new System.Drawing.Point(257, 17);
-            this.txtDataCriacao.Name = "txtDataCriacao";
-            this.txtDataCriacao.Size = new System.Drawing.Size(167, 23);
-            this.txtDataCriacao.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(163, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 15);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Data de criação";
+            this.l_Numero.AutoSize = true;
+            this.l_Numero.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_Numero.Location = new System.Drawing.Point(10, 39);
+            this.l_Numero.Name = "l_Numero";
+            this.l_Numero.Size = new System.Drawing.Size(60, 16);
+            this.l_Numero.TabIndex = 10;
+            this.l_Numero.Text = "Número:";
             // 
             // CadastroTarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 211);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtDataCriacao);
-            this.Controls.Add(this.comboBoxPrioridade);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGravar);
-            this.Controls.Add(this.txtTitulo);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.ClientSize = new System.Drawing.Size(421, 205);
+            this.Controls.Add(this.tb_Numero);
+            this.Controls.Add(this.l_Numero);
+            this.Controls.Add(this.cb_Prioridade);
+            this.Controls.Add(this.l_Prioridade);
+            this.Controls.Add(this.tb_Titulo);
+            this.Controls.Add(this.l_titulo);
+            this.Controls.Add(this.btn_Cancelar);
+            this.Controls.Add(this.btn_Cadastrar);
+            this.Controls.Add(this.l_CadastroTarefa);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CadastroTarefas";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Tarefas";
+            this.Text = "Cadastro de Tarefa";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,15 +154,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtTitulo;
-        private System.Windows.Forms.Button btnGravar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBoxPrioridade;
-        private System.Windows.Forms.TextBox txtDataCriacao;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label l_CadastroTarefa;
+        private System.Windows.Forms.Button btn_Cadastrar;
+        private System.Windows.Forms.Button btn_Cancelar;
+        private System.Windows.Forms.Label l_titulo;
+        private System.Windows.Forms.TextBox tb_Titulo;
+        private System.Windows.Forms.Label l_Prioridade;
+        private System.Windows.Forms.ComboBox cb_Prioridade;
+        private System.Windows.Forms.TextBox tb_Numero;
+        private System.Windows.Forms.Label l_Numero;
     }
 }

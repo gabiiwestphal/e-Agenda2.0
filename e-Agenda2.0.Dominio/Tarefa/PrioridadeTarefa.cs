@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace e_Agenda2._0.Dominio.Tarefa
 {
-    public enum Status
+    public enum PrioridadeTarefa
     {
-        pendente, concluido
+        Alta, Normal, Baixa
     }
 }

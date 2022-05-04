@@ -14,7 +14,7 @@ namespace e_Agenda2._0.WinFormsApp.Telas.Tela_Tarefa
 {
     public partial class CadastroItensTarefa : Form
     {
-        private readonly Tarefa tarefa;
+        public readonly Tarefa tarefa;
 
         public CadastroItensTarefa(Tarefa tarefa)
         {
@@ -22,11 +22,11 @@ namespace e_Agenda2._0.WinFormsApp.Telas.Tela_Tarefa
 
             this.tarefa = tarefa;
 
-            labelTituloTarefa.Text = tarefa.Descricao;
+            l_TarefaSelecionada.Text = tarefa.Titulo;
 
             foreach (Item item in tarefa.Itens)
             {
-                listItensTarefa.Items.Add(item);
+                lb_Itens.Items.Add(item);
             }
         }
 
@@ -34,10 +34,42 @@ namespace e_Agenda2._0.WinFormsApp.Telas.Tela_Tarefa
         {
             get
             {
-                return listItensTarefa.Items.Cast<Item>().ToList();
+                return lb_Itens.Items.Cast<Item>().ToList();
             }
         }
 
+        private void btn_AdicionarItem_Click(object sender, EventArgs e)
+        {
+            List<string> titulos = ItensAdicionados.Select(x => x.Titulo).ToList();
+
+            if (titulos.Count == 0 || titulos.Contains(tb_Titulo.Text) == false)
+            {
+                Item item = new Item();
+
+                item.Titulo = tb_Titulo.Text;
+
+                if (cb_Status.SelectedIndex == 0)
+                {
+                    item.Concluido = false;
+                }
+                else if (cb_Status.SelectedIndex == 1)
+                {
+                    item.Concluido = true;
+                }
+
+                lb_Itens.Items.Add(item);
+            }
+            else
+            {
+                MessageBox.Show("Preencha os campos corretamente!", "Falha", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            tb_Titulo.Clear();
+            tb_Descricao.Clear();
+            cb_Status.SelectedIndex = -1;
+
         }
+
     }
+}
 

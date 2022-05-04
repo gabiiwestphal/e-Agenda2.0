@@ -8,4 +8,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\e-Agenda2.0.Dominio\e-Agenda2.0.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>

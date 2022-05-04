@@ -14,13 +14,14 @@ namespace e_Agenda2._0.WinFormsApp.Telas.Tela_Tarefa
     public partial class AtualizacaoItensTarefa : Form
     {
         private readonly Tarefa tarefa;
+        private IRepositorioTarefa repositorioTarefa;
 
         public AtualizacaoItensTarefa(Tarefa tarefa)
-        {
+        {            
             InitializeComponent();
             this.tarefa = tarefa;
 
-            labelTituloTarefa.Text = tarefa.Titulo;
+            l_Titulo.Text = tarefa.Titulo;
 
             CarregarItensTarefa(tarefa);
         }
@@ -30,21 +31,29 @@ namespace e_Agenda2._0.WinFormsApp.Telas.Tela_Tarefa
             int i = 0;
             foreach (var item in tarefa.Itens)
             {
-                listItensTarefa.Items.Add(item);
+                checkedLb_Itens.Items.Add(item);
 
-                if (!item.EstaPendente)
-                    listItensTarefa.SetItemChecked(i, true);
+                if (item.Concluido)
+                    checkedLb_Itens.SetItemChecked(i, true);
 
                 i++;
             }
 
+            foreach (var item in tarefa.Itens)
+            {
+                if (checkedLb_Itens.SelectedItems.Count == checkedLb_Itens.Items.Count)
+                {
+                    repositorioTarefa.Excluir(tarefa);
+                }
+
+            }
         }
 
         public List<Item> ItensConcluidos
         {
             get
             {
-                return listItensTarefa.CheckedItems
+                return checkedLb_Itens.CheckedItems
                     .Cast<Item>()
                     .ToList();
             }
@@ -54,11 +63,16 @@ namespace e_Agenda2._0.WinFormsApp.Telas.Tela_Tarefa
         {
             get
             {
-                return listItensTarefa.Items
+                return checkedLb_Itens.Items
                     .Cast<Item>()
                     .Except(ItensConcluidos)
                     .ToList();
             }
+        }
+
+        private void l_AtualizacaoItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

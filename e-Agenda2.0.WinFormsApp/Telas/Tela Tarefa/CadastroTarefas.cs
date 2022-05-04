@@ -18,7 +18,15 @@ namespace e_Agenda2._0.WinFormsApp.Telas.Tela_Tarefa
         public CadastroTarefas()
         {
             InitializeComponent();
-            comboBoxPrioridade.SelectedIndex = 0;
+
+            cb_Prioridade.Items.Add("Alta");
+            cb_Prioridade.Items.Add("Normal");
+            cb_Prioridade.Items.Add("Baixa");
+
+            cb_Prioridade.SelectedIndex = 2;
+
+            tb_Numero.Text = "";
+
         }
 
         public Tarefa Tarefa
@@ -30,27 +38,40 @@ namespace e_Agenda2._0.WinFormsApp.Telas.Tela_Tarefa
             set
             {
                 tarefa = value;
-                txtId.Text = tarefa.id.ToString();
-                txtTitulo.Text = tarefa.Descricao;
-                comboBoxPrioridade.Text = tarefa.PrioridadeTarefa;
-                txtDataCriacao.Text = tarefa.DataCriacao.ToString();
-                PreencherCampoDataCriacao();
+                tb_Titulo.Text = tarefa.Titulo;
             }
         }
 
-        private void btnGravar_Click(object sender, EventArgs e)
+        private void btn_Cadastrar_Click(object sender, EventArgs e)
         {
-            tarefa.Descricao = txtTitulo.Text;
-            tarefa.DataCriacao = DateTime.Parse(txtDataCriacao.Text);
-            tarefa.PrioridadeTarefa = comboBoxPrioridade.Text;
+            if (!String.IsNullOrEmpty(tb_Titulo.Text))
+            {
+                tarefa.Titulo = tb_Titulo.Text;
+
+                if (cb_Prioridade.SelectedIndex == 0)
+                {
+                    tarefa.Prioridade = 0;
+                }
+                else if (cb_Prioridade.SelectedIndex == 1)
+                {
+                    tarefa.Prioridade = (PrioridadeTarefa)1;
+                }
+                else if (cb_Prioridade.SelectedIndex == 2)
+                {
+                    tarefa.Prioridade = (PrioridadeTarefa)2;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Você não pode cadastrar uma tarefa sem um título!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
         }
 
-        private void PreencherCampoDataCriacao()
+        private void btn_Cancelar_Click(object sender, EventArgs e)
         {
-            if (tarefa.DataCriacao == new DateTime(1, 1, 1))
-                txtDataCriacao.Text = DateTime.Now.ToString();
-            else
-                txtDataCriacao.Text = Tarefa.DataCriacao.ToString();
+            this.Close();
         }
+
     }
 }

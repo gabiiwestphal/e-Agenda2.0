@@ -28,194 +28,189 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtAssunto = new System.Windows.Forms.TextBox();
-            this.txtLocal = new System.Windows.Forms.TextBox();
-            this.dateTimePickerDataCompromisso = new System.Windows.Forms.DateTimePicker();
-            this.btnGravar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.comboBoxContato = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerHoraInicio = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerHoraTermino = new System.Windows.Forms.DateTimePicker();
+            this.l_CadastroCompromisso = new System.Windows.Forms.Label();
+            this.tb_Assunto = new System.Windows.Forms.TextBox();
+            this.l_Assunto = new System.Windows.Forms.Label();
+            this.tb_Local = new System.Windows.Forms.TextBox();
+            this.l_Local = new System.Windows.Forms.Label();
+            this.l_Data = new System.Windows.Forms.Label();
+            this.dt_Data = new System.Windows.Forms.DateTimePicker();
+            this.tb_HoraInicio = new System.Windows.Forms.TextBox();
+            this.l_HoraInicio = new System.Windows.Forms.Label();
+            this.tb_HoraTermino = new System.Windows.Forms.TextBox();
+            this.l_HoraTermino = new System.Windows.Forms.Label();
+            this.l_Contato = new System.Windows.Forms.Label();
+            this.cb_Contato = new System.Windows.Forms.ComboBox();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
+            this.btn_Inserir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // l_CadastroCompromisso
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Assunto:";
+            this.l_CadastroCompromisso.AutoSize = true;
+            this.l_CadastroCompromisso.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.l_CadastroCompromisso.Location = new System.Drawing.Point(32, 7);
+            this.l_CadastroCompromisso.Name = "l_CadastroCompromisso";
+            this.l_CadastroCompromisso.Size = new System.Drawing.Size(214, 19);
+            this.l_CadastroCompromisso.TabIndex = 4;
+            this.l_CadastroCompromisso.Text = "Cadastro de Compromisso";
             // 
-            // label2
+            // tb_Assunto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(255, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Local:";
+            this.tb_Assunto.Location = new System.Drawing.Point(10, 52);
+            this.tb_Assunto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Assunto.Name = "tb_Assunto";
+            this.tb_Assunto.Size = new System.Drawing.Size(270, 23);
+            this.tb_Assunto.TabIndex = 7;
             // 
-            // label3
+            // l_Assunto
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Data:";
+            this.l_Assunto.AutoSize = true;
+            this.l_Assunto.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_Assunto.Location = new System.Drawing.Point(10, 37);
+            this.l_Assunto.Name = "l_Assunto";
+            this.l_Assunto.Size = new System.Drawing.Size(62, 16);
+            this.l_Assunto.TabIndex = 6;
+            this.l_Assunto.Text = "Assunto:";
             // 
-            // label4
+            // tb_Local
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 80);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Horário de início:";
+            this.tb_Local.Location = new System.Drawing.Point(319, 52);
+            this.tb_Local.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_Local.Name = "tb_Local";
+            this.tb_Local.Size = new System.Drawing.Size(270, 23);
+            this.tb_Local.TabIndex = 9;
             // 
-            // label5
+            // l_Local
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 108);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Horário de término:";
+            this.l_Local.AutoSize = true;
+            this.l_Local.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_Local.Location = new System.Drawing.Point(319, 34);
+            this.l_Local.Name = "l_Local";
+            this.l_Local.Size = new System.Drawing.Size(45, 16);
+            this.l_Local.TabIndex = 8;
+            this.l_Local.Text = "Local:";
             // 
-            // label6
+            // l_Data
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(299, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 15);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Contato relacionado:";
+            this.l_Data.AutoSize = true;
+            this.l_Data.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_Data.Location = new System.Drawing.Point(10, 91);
+            this.l_Data.Name = "l_Data";
+            this.l_Data.Size = new System.Drawing.Size(41, 16);
+            this.l_Data.TabIndex = 10;
+            this.l_Data.Text = "Data:";
             // 
-            // txtAssunto
+            // dt_Data
             // 
-            this.txtAssunto.Location = new System.Drawing.Point(87, 12);
-            this.txtAssunto.Name = "txtAssunto";
-            this.txtAssunto.Size = new System.Drawing.Size(162, 23);
-            this.txtAssunto.TabIndex = 0;
-            this.txtAssunto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dt_Data.Location = new System.Drawing.Point(10, 119);
+            this.dt_Data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dt_Data.Name = "dt_Data";
+            this.dt_Data.Size = new System.Drawing.Size(270, 23);
+            this.dt_Data.TabIndex = 11;
             // 
-            // txtLocal
+            // tb_HoraInicio
             // 
-            this.txtLocal.Location = new System.Drawing.Point(299, 12);
-            this.txtLocal.Name = "txtLocal";
-            this.txtLocal.Size = new System.Drawing.Size(162, 23);
-            this.txtLocal.TabIndex = 1;
-            this.txtLocal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_HoraInicio.Location = new System.Drawing.Point(319, 121);
+            this.tb_HoraInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_HoraInicio.Name = "tb_HoraInicio";
+            this.tb_HoraInicio.Size = new System.Drawing.Size(270, 23);
+            this.tb_HoraInicio.TabIndex = 13;
             // 
-            // dateTimePickerDataCompromisso
+            // l_HoraInicio
             // 
-            this.dateTimePickerDataCompromisso.Location = new System.Drawing.Point(87, 43);
-            this.dateTimePickerDataCompromisso.MinDate = new System.DateTime(2022, 5, 2, 0, 0, 0, 0);
-            this.dateTimePickerDataCompromisso.Name = "dateTimePickerDataCompromisso";
-            this.dateTimePickerDataCompromisso.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePickerDataCompromisso.Size = new System.Drawing.Size(374, 23);
-            this.dateTimePickerDataCompromisso.TabIndex = 2;
-            this.dateTimePickerDataCompromisso.Value = new System.DateTime(2022, 5, 2, 20, 22, 9, 0);
+            this.l_HoraInicio.AutoSize = true;
+            this.l_HoraInicio.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_HoraInicio.Location = new System.Drawing.Point(319, 103);
+            this.l_HoraInicio.Name = "l_HoraInicio";
+            this.l_HoraInicio.Size = new System.Drawing.Size(97, 16);
+            this.l_HoraInicio.TabIndex = 12;
+            this.l_HoraInicio.Text = "Hora de Inicio:";
             // 
-            // btnGravar
+            // tb_HoraTermino
             // 
-            this.btnGravar.BackColor = System.Drawing.Color.White;
-            this.btnGravar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnGravar.Location = new System.Drawing.Point(224, 149);
-            this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(75, 23);
-            this.btnGravar.TabIndex = 6;
-            this.btnGravar.Text = "Gravar";
-            this.btnGravar.UseVisualStyleBackColor = false;
-            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
+            this.tb_HoraTermino.Location = new System.Drawing.Point(10, 178);
+            this.tb_HoraTermino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_HoraTermino.Name = "tb_HoraTermino";
+            this.tb_HoraTermino.Size = new System.Drawing.Size(270, 23);
+            this.tb_HoraTermino.TabIndex = 15;
             // 
-            // btnLimpar
+            // l_HoraTermino
             // 
-            this.btnLimpar.BackColor = System.Drawing.Color.White;
-            this.btnLimpar.Location = new System.Drawing.Point(305, 149);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 7;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = false;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            this.l_HoraTermino.AutoSize = true;
+            this.l_HoraTermino.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_HoraTermino.Location = new System.Drawing.Point(10, 160);
+            this.l_HoraTermino.Name = "l_HoraTermino";
+            this.l_HoraTermino.Size = new System.Drawing.Size(115, 16);
+            this.l_HoraTermino.TabIndex = 14;
+            this.l_HoraTermino.Text = "Hora de Termino:";
             // 
-            // btnCancelar
+            // l_Contato
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.White;
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(386, 149);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.l_Contato.AutoSize = true;
+            this.l_Contato.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.l_Contato.Location = new System.Drawing.Point(319, 160);
+            this.l_Contato.Name = "l_Contato";
+            this.l_Contato.Size = new System.Drawing.Size(61, 16);
+            this.l_Contato.TabIndex = 16;
+            this.l_Contato.Text = "Contato:";
             // 
-            // comboBoxContato
+            // cb_Contato
             // 
-            this.comboBoxContato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxContato.FormattingEnabled = true;
-            this.comboBoxContato.Location = new System.Drawing.Point(271, 100);
-            this.comboBoxContato.Name = "comboBoxContato";
-            this.comboBoxContato.Size = new System.Drawing.Size(190, 23);
-            this.comboBoxContato.TabIndex = 5;
+            this.cb_Contato.FormattingEnabled = true;
+            this.cb_Contato.Location = new System.Drawing.Point(319, 178);
+            this.cb_Contato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cb_Contato.Name = "cb_Contato";
+            this.cb_Contato.Size = new System.Drawing.Size(270, 23);
+            this.cb_Contato.TabIndex = 17;
             // 
-            // dateTimePickerHoraInicio
+            // btn_Cancelar
             // 
-            this.dateTimePickerHoraInicio.CustomFormat = "HH:mm";
-            this.dateTimePickerHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerHoraInicio.Location = new System.Drawing.Point(142, 72);
-            this.dateTimePickerHoraInicio.Name = "dateTimePickerHoraInicio";
-            this.dateTimePickerHoraInicio.ShowUpDown = true;
-            this.dateTimePickerHoraInicio.Size = new System.Drawing.Size(85, 23);
-            this.dateTimePickerHoraInicio.TabIndex = 3;
+            this.btn_Cancelar.Location = new System.Drawing.Point(319, 240);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(270, 32);
+            this.btn_Cancelar.TabIndex = 19;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
-            // dateTimePickerHoraTermino
+            // btn_Inserir
             // 
-            this.dateTimePickerHoraTermino.CustomFormat = "HH:mm";
-            this.dateTimePickerHoraTermino.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerHoraTermino.Location = new System.Drawing.Point(142, 102);
-            this.dateTimePickerHoraTermino.Name = "dateTimePickerHoraTermino";
-            this.dateTimePickerHoraTermino.ShowUpDown = true;
-            this.dateTimePickerHoraTermino.Size = new System.Drawing.Size(85, 23);
-            this.dateTimePickerHoraTermino.TabIndex = 4;
+            this.btn_Inserir.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_Inserir.Location = new System.Drawing.Point(10, 240);
+            this.btn_Inserir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Inserir.Name = "btn_Inserir";
+            this.btn_Inserir.Size = new System.Drawing.Size(270, 32);
+            this.btn_Inserir.TabIndex = 18;
+            this.btn_Inserir.Text = "Inserir";
+            this.btn_Inserir.UseVisualStyleBackColor = true;
+            this.btn_Inserir.Click += new System.EventHandler(this.btn_Inserir_Click);
             // 
             // CadastroCompromisso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(493, 204);
-            this.Controls.Add(this.dateTimePickerHoraTermino);
-            this.Controls.Add(this.dateTimePickerHoraInicio);
-            this.Controls.Add(this.comboBoxContato);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnLimpar);
-            this.Controls.Add(this.btnGravar);
-            this.Controls.Add(this.dateTimePickerDataCompromisso);
-            this.Controls.Add(this.txtLocal);
-            this.Controls.Add(this.txtAssunto);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.ClientSize = new System.Drawing.Size(622, 289);
+            this.Controls.Add(this.btn_Cancelar);
+            this.Controls.Add(this.btn_Inserir);
+            this.Controls.Add(this.cb_Contato);
+            this.Controls.Add(this.l_Contato);
+            this.Controls.Add(this.tb_HoraTermino);
+            this.Controls.Add(this.l_HoraTermino);
+            this.Controls.Add(this.tb_HoraInicio);
+            this.Controls.Add(this.l_HoraInicio);
+            this.Controls.Add(this.dt_Data);
+            this.Controls.Add(this.l_Data);
+            this.Controls.Add(this.tb_Local);
+            this.Controls.Add(this.l_Local);
+            this.Controls.Add(this.tb_Assunto);
+            this.Controls.Add(this.l_Assunto);
+            this.Controls.Add(this.l_CadastroCompromisso);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CadastroCompromisso";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Compromissos";
+            this.Text = "Cadastro de Compromisso";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,20 +218,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtAssunto;
-        private System.Windows.Forms.TextBox txtLocal;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDataCompromisso;
-        private System.Windows.Forms.Button btnGravar;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.ComboBox comboBoxContato;
-        private System.Windows.Forms.DateTimePicker dateTimePickerHoraInicio;
-        private System.Windows.Forms.DateTimePicker dateTimePickerHoraTermino;
+        private System.Windows.Forms.Label l_CadastroCompromisso;
+        private System.Windows.Forms.TextBox tb_Assunto;
+        private System.Windows.Forms.Label l_Assunto;
+        private System.Windows.Forms.TextBox tb_Local;
+        private System.Windows.Forms.Label l_Local;
+        private System.Windows.Forms.Label l_Data;
+        private System.Windows.Forms.DateTimePicker dt_Data;
+        private System.Windows.Forms.TextBox tb_HoraInicio;
+        private System.Windows.Forms.Label l_HoraInicio;
+        private System.Windows.Forms.TextBox tb_HoraTermino;
+        private System.Windows.Forms.Label l_HoraTermino;
+        private System.Windows.Forms.Label l_Contato;
+        private System.Windows.Forms.ComboBox cb_Contato;
+        private System.Windows.Forms.Button btn_Cancelar;
+        private System.Windows.Forms.Button btn_Inserir;
     }
 }

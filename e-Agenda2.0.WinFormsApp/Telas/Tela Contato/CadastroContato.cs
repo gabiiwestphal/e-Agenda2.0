@@ -30,35 +30,27 @@ namespace e_Agenda2._0.WinFormsApp.Telas.Tela_Contato
             set
             {
                 contato = value;
-                txtNome.Text = contato.Nome;
-                txtEmail.Text = contato.Email;
-                txtTelefone.Text = contato.Telefone;
-                txtEmpresa.Text = contato.Empresa;
-                txtCargo.Text = contato.Cargo;
+                tb_Nome.Text = contato.Nome;
+                tb_Email.Text = contato.Email;
+                tb_Telefone.Text = contato.Telefone;
+                tb_Empresa.Text = contato.Empresa;
+                tb_Cargo.Text = contato.Cargo;
             }
         }
 
-        private void btnLimparCampos_Click(object sender, EventArgs e)
+        private void btn_Inserir_Click(object sender, EventArgs e)
         {
-            LimparCampos();
+            contato.Nome = tb_Nome.Text;
+            contato.Email = tb_Email.Text;
+            contato.Telefone = tb_Telefone.Text;
+            contato.Empresa = tb_Empresa.Text;
+            contato.Cargo = tb_Cargo.Text;
         }
 
-        private void btnGravar_Click(object sender, EventArgs e)
+        private void btn_Cancelar_Click(object sender, EventArgs e)
         {
-            contato.Nome = txtNome.Text;
-            contato.Email = txtEmail.Text;
-            contato.Telefone = txtTelefone.Text;
-            contato.Empresa = txtEmpresa.Text;
-            contato.Cargo = txtCargo.Text;
+            this.Close();
         }
-
-        private void LimparCampos()
-        {
-            txtNome.Text = "";
-            txtEmail.Text = "";
-            txtTelefone.Text = "";
-            txtEmpresa.Text = "";
-            txtCargo.Text = "";
-        }
+       
     }
 }

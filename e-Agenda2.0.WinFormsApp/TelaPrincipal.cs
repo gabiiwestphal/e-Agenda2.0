@@ -1,4 +1,7 @@
-﻿using System;
+﻿using e_Agenda2._0.Dominio.Compromisso;
+using e_Agenda2._0.Dominio.Contato;
+using e_Agenda2._0.Dominio.Tarefa;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,38 +10,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using e_Agenda2._0.WinFormsApp.Telas.Tela_Tarefa;
-using e_Agenda2._0.WinFormsApp.Telas.Tela_Contato;
-using e_Agenda2._0.WinFormsApp.Telas.Tela_Compromisso;
 
 namespace e_Agenda2._0.WinFormsApp
 {
     public partial class TelaPrincipal : Form
     {
+        private IRepositorioTarefa repositorioTarefa;
+        private IRepositorioContato repositorioContato;
+        private IRepositorioCompromisso repositorioCompromisso;
+
         public TelaPrincipal()
         {
+           
             InitializeComponent();
+
+            CarregarTarefa();
+            CarregarContato();
+            CarregarCompromisso();
         }
 
-        private void btnCompromisso_Click(object sender, EventArgs e)
+        private void CarregarTarefa()
         {
-            panelPrincipal.Controls.Clear();
-            ListagemCompromisso tela = new ListagemCompromisso();
-            panelPrincipal.Controls.Add(tela);
+
+        }  
+
+        private void CarregarContato()
+        {
+            
         }
 
-        private void btnTarefas_Click(object sender, EventArgs e)
+        private void CarregarCompromisso()
         {
-            panelPrincipal.Controls.Clear();
-            ListagemTarefas tela = new ListagemTarefas();
-            panelPrincipal.Controls.Add(tela);
+            
         }
 
-        private void btnContatos_Click(object sender, EventArgs e)
+
+        private void btn_GerenciarTarefas_Click(object sender, EventArgs e)
         {
-            panelPrincipal.Controls.Clear();
-            ListagemContato tela = new ListagemContato();
-            panelPrincipal.Controls.Add(tela);
+            
+
         }
+
+        private void btn_GerenciarCompromissos_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void btn_GerenciarContatos_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void btn_Sair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+       
     }
 }
