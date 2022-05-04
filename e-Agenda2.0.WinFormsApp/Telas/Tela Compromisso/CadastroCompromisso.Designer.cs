@@ -49,7 +49,7 @@
             // 
             this.l_CadastroCompromisso.AutoSize = true;
             this.l_CadastroCompromisso.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.l_CadastroCompromisso.Location = new System.Drawing.Point(32, 7);
+            this.l_CadastroCompromisso.Location = new System.Drawing.Point(204, 9);
             this.l_CadastroCompromisso.Name = "l_CadastroCompromisso";
             this.l_CadastroCompromisso.Size = new System.Drawing.Size(214, 19);
             this.l_CadastroCompromisso.TabIndex = 4;
@@ -75,7 +75,7 @@
             // 
             // tb_Local
             // 
-            this.tb_Local.Location = new System.Drawing.Point(319, 52);
+            this.tb_Local.Location = new System.Drawing.Point(325, 52);
             this.tb_Local.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Local.Name = "tb_Local";
             this.tb_Local.Size = new System.Drawing.Size(270, 23);
@@ -85,7 +85,7 @@
             // 
             this.l_Local.AutoSize = true;
             this.l_Local.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_Local.Location = new System.Drawing.Point(319, 34);
+            this.l_Local.Location = new System.Drawing.Point(325, 34);
             this.l_Local.Name = "l_Local";
             this.l_Local.Size = new System.Drawing.Size(45, 16);
             this.l_Local.TabIndex = 8;
@@ -95,7 +95,7 @@
             // 
             this.l_Data.AutoSize = true;
             this.l_Data.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_Data.Location = new System.Drawing.Point(10, 91);
+            this.l_Data.Location = new System.Drawing.Point(10, 95);
             this.l_Data.Name = "l_Data";
             this.l_Data.Size = new System.Drawing.Size(41, 16);
             this.l_Data.TabIndex = 10;
@@ -103,15 +103,15 @@
             // 
             // dt_Data
             // 
-            this.dt_Data.Location = new System.Drawing.Point(10, 119);
+            this.dt_Data.Location = new System.Drawing.Point(10, 113);
             this.dt_Data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dt_Data.Name = "dt_Data";
-            this.dt_Data.Size = new System.Drawing.Size(270, 23);
+            this.dt_Data.Size = new System.Drawing.Size(585, 23);
             this.dt_Data.TabIndex = 11;
             // 
             // tb_HoraInicio
             // 
-            this.tb_HoraInicio.Location = new System.Drawing.Point(319, 121);
+            this.tb_HoraInicio.Location = new System.Drawing.Point(10, 171);
             this.tb_HoraInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_HoraInicio.Name = "tb_HoraInicio";
             this.tb_HoraInicio.Size = new System.Drawing.Size(270, 23);
@@ -121,7 +121,7 @@
             // 
             this.l_HoraInicio.AutoSize = true;
             this.l_HoraInicio.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_HoraInicio.Location = new System.Drawing.Point(319, 103);
+            this.l_HoraInicio.Location = new System.Drawing.Point(10, 153);
             this.l_HoraInicio.Name = "l_HoraInicio";
             this.l_HoraInicio.Size = new System.Drawing.Size(97, 16);
             this.l_HoraInicio.TabIndex = 12;
@@ -129,7 +129,7 @@
             // 
             // tb_HoraTermino
             // 
-            this.tb_HoraTermino.Location = new System.Drawing.Point(10, 178);
+            this.tb_HoraTermino.Location = new System.Drawing.Point(325, 171);
             this.tb_HoraTermino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_HoraTermino.Name = "tb_HoraTermino";
             this.tb_HoraTermino.Size = new System.Drawing.Size(270, 23);
@@ -139,7 +139,7 @@
             // 
             this.l_HoraTermino.AutoSize = true;
             this.l_HoraTermino.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_HoraTermino.Location = new System.Drawing.Point(10, 160);
+            this.l_HoraTermino.Location = new System.Drawing.Point(325, 153);
             this.l_HoraTermino.Name = "l_HoraTermino";
             this.l_HoraTermino.Size = new System.Drawing.Size(115, 16);
             this.l_HoraTermino.TabIndex = 14;
@@ -149,7 +149,7 @@
             // 
             this.l_Contato.AutoSize = true;
             this.l_Contato.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.l_Contato.Location = new System.Drawing.Point(319, 160);
+            this.l_Contato.Location = new System.Drawing.Point(10, 213);
             this.l_Contato.Name = "l_Contato";
             this.l_Contato.Size = new System.Drawing.Size(61, 16);
             this.l_Contato.TabIndex = 16;
@@ -158,15 +158,15 @@
             // cb_Contato
             // 
             this.cb_Contato.FormattingEnabled = true;
-            this.cb_Contato.Location = new System.Drawing.Point(319, 178);
+            this.cb_Contato.Location = new System.Drawing.Point(12, 231);
             this.cb_Contato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_Contato.Name = "cb_Contato";
-            this.cb_Contato.Size = new System.Drawing.Size(270, 23);
+            this.cb_Contato.Size = new System.Drawing.Size(583, 23);
             this.cb_Contato.TabIndex = 17;
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.Location = new System.Drawing.Point(319, 240);
+            this.btn_Cancelar.Location = new System.Drawing.Point(325, 273);
             this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(270, 32);
@@ -178,7 +178,7 @@
             // btn_Inserir
             // 
             this.btn_Inserir.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btn_Inserir.Location = new System.Drawing.Point(10, 240);
+            this.btn_Inserir.Location = new System.Drawing.Point(10, 273);
             this.btn_Inserir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Inserir.Name = "btn_Inserir";
             this.btn_Inserir.Size = new System.Drawing.Size(270, 32);
@@ -191,7 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 289);
+            this.ClientSize = new System.Drawing.Size(614, 320);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Inserir);
             this.Controls.Add(this.cb_Contato);

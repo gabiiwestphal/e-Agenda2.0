@@ -15,85 +15,84 @@ namespace e_Agenda2._0.WinFormsApp.Telas.Tela_Compromisso
 {
     public partial class CadastroCompromisso : Form
     {
-        private Compromisso compromisso;
-        private IRepositorioContato repositorioContato;
+            private Compromisso compromisso;
+            private IRepositorioContato repositorioContato;
 
-        public CadastroCompromisso()
-        {
-            InitializeComponent();
-
-
-            List<Contato> contatos = repositorioContato.SelecionarTodos();
-
-            cb_Contato.Items.Clear();
-
-            foreach (Contato c in contatos)
+            public CadastroCompromisso()
             {
-                cb_Contato.Items.Add(c.Nome);
-            }
+                InitializeComponent();
 
-        }
 
-        public Compromisso Compromisso
-        {
-            get
-            {
-                return compromisso;
-            }
-            set
-            {
-                compromisso = value;
-                tb_Assunto.Text = compromisso.Assunto;
-                tb_Local.Text = compromisso.Local;
+                List<Contato> contatos = repositorioContato.SelecionarTodos();
 
-                if (compromisso.DataCompromisso < dt_Data.MinDate)
+                cb_Contato.Items.Clear();
+
+                foreach (Contato c in contatos)
                 {
-                    dt_Data.Value = DateTime.Now;
-                }
-                else
-                {
-                    dt_Data.Value = compromisso.DataCompromisso;
-                }
-
-                tb_HoraInicio.Text = compromisso.HoraInicio;
-                tb_HoraTermino.Text = compromisso.HoraTermino;
-
-                if (!String.IsNullOrEmpty(cb_Contato.Text))
-                {
-                    cb_Contato.Text = compromisso.Contato.Nome;
+                    cb_Contato.Items.Add(c.Nome);
                 }
 
             }
-        }
 
-        private Contato ReceberContato(string nome)
-        {
-            List<Contato> contatos = repositorioContato.SelecionarTodos();
-
-            foreach (Contato contato in contatos)
+            public Compromisso Compromisso
             {
-                if (contato.Nome == nome)
-                    return contato;
+                get
+                {
+                    return compromisso;
+                }
+                set
+                {
+                    compromisso = value;
+                    tb_Assunto.Text = compromisso.Assunto;
+                    tb_Local.Text = compromisso.Local;
+
+                    if (compromisso.DataCompromisso < dt_Data.MinDate)
+                    {
+                        dt_Data.Value = DateTime.Now;
+                    }
+                    else
+                    {
+                        dt_Data.Value = compromisso.DataCompromisso;
+                    }
+
+                    tb_HoraInicio.Text = compromisso.HoraInicio;
+                    tb_HoraTermino.Text = compromisso.HoraTermino;
+
+                    if (!String.IsNullOrEmpty(cb_Contato.Text))
+                    {
+                        cb_Contato.Text = compromisso.Contato.Nome;
+                    }
+
+                }
             }
 
-            return null;
-        }
+            private Contato ReceberContato(string nome)
+            {
+                List<Contato> contatos = repositorioContato.SelecionarTodos();
 
-        private void btn_Inserir_Click(object sender, EventArgs e)
-        {
-            compromisso.Assunto = tb_Assunto.Text;
-            compromisso.Local = tb_Local.Text;
-            compromisso.DataCompromisso = dt_Data.Value;
-            compromisso.HoraInicio = tb_HoraInicio.Text;
-            compromisso.HoraTermino = tb_HoraTermino.Text;
-            compromisso.Contato = ReceberContato(cb_Contato.Text);
-        }
+                foreach (Contato contato in contatos)
+                {
+                    if (contato.Nome == nome)
+                        return contato;
+                }
 
-        private void btn_Cancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-     
+                return null;
+            }
+
+            private void btn_Inserir_Click(object sender, EventArgs e)
+            {
+                compromisso.Assunto = tb_Assunto.Text;
+                compromisso.Local = tb_Local.Text;
+                compromisso.DataCompromisso = dt_Data.Value;
+                compromisso.HoraInicio = tb_HoraInicio.Text;
+                compromisso.HoraTermino = tb_HoraTermino.Text;
+                compromisso.Contato = ReceberContato(cb_Contato.Text);
+            }
+
+            private void btn_Cancelar_Click(object sender, EventArgs e)
+            {
+                this.Close();
+            }
     }
 }
 
