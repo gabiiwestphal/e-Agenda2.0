@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using e_Agenda2._0.Dominio.Compartilhado;
 
 
 namespace e_Agenda2._0.Dominio.Contato
@@ -15,17 +16,18 @@ namespace e_Agenda2._0.Dominio.Contato
         public string Telefone { get; set; }
         public string Empresa { get; set; }
         public string Cargo { get; set; }
-        public Contato()
-        {
-        }
+     
 
         public Contato(string nome, string email, string telefone, string empresa, string cargo)
         {
-            this.Nome = nome;
-            this.Email = email;
-            this.Telefone = telefone;
-            this.Empresa = empresa;
-            this.Cargo = cargo;
+            Nome = nome;
+            Email = email;
+            Telefone = telefone;
+            Empresa = empresa;
+            Cargo = cargo;
+        }
+        public Contato()
+        {
         }
 
         public override string ToString()

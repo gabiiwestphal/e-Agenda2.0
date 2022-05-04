@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using e_Agenda2._0.Dominio.Compartilhado;
+using e_Agenda2._0.Dominio.Contato;
 
 namespace e_Agenda2._0.Dominio.Compromisso
 {
@@ -18,18 +19,17 @@ namespace e_Agenda2._0.Dominio.Compromisso
         public Contato Contato { get; set; }
         public Compromisso(string assunto, string local, DateTime dataCompromisso, string horaInicio, string horaTermino, Contato contato)
         {
-            this.Assunto = assunto;
-            this.Local = local;
-            this.HoraInicio = horaInicio;
-            this.HoraTermino = horaTermino;
-            this.DataCompromisso = dataCompromisso;
-            this.Contato = contato;
+            Assunto = assunto;
+            Local = local;
+            HoraInicio = horaInicio;
+            HoraTermino = horaTermino;
+            DataCompromisso = dataCompromisso;
+            Contato = contato;
         }
 
         public Compromisso()
         {
         }
-
         public override string ToString()
         {
             string contatoRelacionado = Contato is null ? "Não disponível" : Contato.Nome;
