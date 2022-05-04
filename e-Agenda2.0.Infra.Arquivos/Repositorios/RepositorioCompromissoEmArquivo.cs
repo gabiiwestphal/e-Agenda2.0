@@ -66,7 +66,10 @@ namespace e_Agenda2._0.Infra.Arquivos.Repositorios
             return compromissos;
         }
 
-
+        public List<Compromisso> SelecionarCompromissoPorPeriodo(DateTime dataInicio, DateTime dataTermino)
+        {
+            return compromissos.Where(x => x.DataCompromisso >= dataInicio && x.DataCompromisso <= dataTermino).ToList();
+        }
 
     }
 }

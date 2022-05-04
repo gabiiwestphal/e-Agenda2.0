@@ -15,7 +15,10 @@ namespace e_Agenda2._0.Dominio.Contato
         public string Telefone { get; set; }
         public string Empresa { get; set; }
         public string Cargo { get; set; }
-     
+        public Contato()
+        {
+        }
+
         public Contato(string nome, string email, string telefone, string empresa, string cargo)
         {
             this.Nome = nome;
@@ -24,15 +27,7 @@ namespace e_Agenda2._0.Dominio.Contato
             this.Empresa = empresa;
             this.Cargo = cargo;
         }
-         public Contato(string nome, string email, string telefone)
-         {
-          this.Nome = nome;
-          this.Email = email;
-          this.Telefone = telefone;
-         }
-        public Contato()
-        {
-        }
+
         public override string ToString()
         {       
                return

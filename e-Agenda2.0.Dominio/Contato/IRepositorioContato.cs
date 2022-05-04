@@ -8,8 +8,6 @@ namespace e_Agenda2._0.Dominio.Contato
 {
     public interface IRepositorioContato
     {
-        string Nome { get; }
-
         void Editar(Contato contato);
         void Excluir(Contato contato);
         void Inserir(Contato novoContato);

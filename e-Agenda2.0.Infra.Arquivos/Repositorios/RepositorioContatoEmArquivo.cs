@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace e_Agenda2._0.Infra.Arquivos.Repositorios
 {
+
     public class RepositorioContatoEmArquivo : IRepositorioContato
     {
         private readonly ISerializadorContatos serializador;
@@ -54,5 +55,5 @@ namespace e_Agenda2._0.Infra.Arquivos.Repositorios
         }
 
     }
-}
+}   
 
